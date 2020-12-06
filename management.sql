@@ -1,4 +1,4 @@
-drop table users;
+
 create table users(
 	`id` int UNSIGNED primary key auto_increment comment 'id',
 	`username` varchar(50) UNIQUE default '' comment '用户名',
@@ -8,10 +8,9 @@ create table users(
 	`update_time` TIMESTAMP default CURRENT_TIMESTAMP comment '修改时间',
 	`status` tinyint UNSIGNED default 1 comment '状态'
 );
-insert into users (`username`, `password`) values ('admin', md5('adminmanagementadmin'));
+insert into users (`username`, `password`) values ('admin', md5('adminmanagement'));
 
 
-drop table customer;
 create table customer(
 	id int UNSIGNED primary key auto_increment comment '客户id',
 	`name` varchar(50) default '' comment '客户姓名',
